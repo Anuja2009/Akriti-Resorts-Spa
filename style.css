@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kaushan+Script&family=Parisienne&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+
+}
+
+body{
+    overflow-x: hidden;
+}
+/*Header*/
+.navbar{
+    padding: 10px;
+    background-color: transparent;
+}
+.nav-container{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 7%;
+}
+.navbar-brand {
+    color: white;
+    font-family: 'Parisienne', cursive;
+    font-size: 7vw;
+    margin-top: 0px;
+    margin-left: -10px;
+    line-height: 137px;
+
+}
+
+.nav-item{
+    padding-right: 17px;
+    padding-left: 5px;
+    margin-top: 0px;
+    padding-top: 0;
+    transition: transform .7s;
+}
+.nav-item a{
+    font-size: 23px;
+    color: white;
+    text-transform: uppercase;
+    transition: color .4s;
+}
+.nav-item:hover{
+    /*border-bottom: 1px solid white;*/
+    transform: translateY(-7px);
+
+}
+.nav-item a:hover{
+    color: rgba(255,255,255,0.7);
+}
+/*
+li:nth-child(1){
+    border-bottom: 1px solid white;
+}
+*/
+.carousel-container{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.carousel-item img{
+    width: 100%;
+    height: 130vh;
+    filter: brightness(50%);
+    transform: scaleX(-1);
+    animation-name: Imgzoom-out;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    position: relative;
+
+
+}
+
+@keyframes Imgzoom-out{
+    from{
+        transform: scale(1.1,1.1);
+    }
+    to{
+        transform: scale(1,1);
+    }
+}
+
+/*Hero Text Styling*/
+.hero-text{
+    position: absolute;
+    top: 220px;
+    left: 40%;
+    animation-name: animate-right;
+    animation-duration: 1s;
+    animation-delay: .3s;
+
+}
+@keyframes animate-right{
+    from{
+        top: 420px;
+        left: 40%;
+    }
+    to{
+        top: 220px;
+        left: 40%;
+    }
+}
+.hero-text h1{
+    text-align: center;
+    color: white;
+    font-family: 'Satisfy', cursive;
+    font-size: 6.5vw;
+    word-spacing: 1px;
+    font-weight: 10;
+}
+.hero-text p{
+    color: white;
+    /*font-family: 'Dancing Script', cursive;*/
+    /*font-family: 'Satisfy', cursive;*/
+    font-size: 2vw;
+    font-weight: 100;
+}
+.btn{
+
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;;
+    margin-top: 20px;
+}
+.cta-btn{
+    font-size: 2vw;
+    background-color: rgb(109, 165, 230);;
+    padding: 0.9rem 1.8rem;
+    border-radius: .4rem;
+    transition: background-color .2s;
+}
+.cta-btn:hover{
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgb(109, 165, 230);
+}
+
+@media screen and (max-width: 768px){
+    .hero-text{
+        left: 0;
+        animation: none;
+    }
+    .navbar-brand{
+        font-size: 11vw;
+    }
+    .hero-text h1{
+        font-size: 10vw;
+    }
+    .hero-text p{
+        font-size: 6vw;
+    }
+    .cta-btn{
+        font-size: 5vw;
+
+    }
+    .carousel-item img{
+        height: 100vh;
+    }
+}
+/*Rooms and Villas*/
+.Rooms{
+    margin-top: 970px;
+    text-align: center;
+    font-size: 30px;
+    color: rgba(10, 8, 8, 0.568);
+
+}
+.Rooms h1{
+    font-family: 'Herr Von Muellerhoff', cursive;
+    color: rgba(10, 8, 8, 0.568);
+    font-size: 7.5rem;
+    font-weight: 70;
+    line-height: .4;
+}
+.Rooms p{
+    text-align: center;
+    margin: 50px;
+    font-style: italic;
+    color: rgba(10, 8, 8, 0.568);
+   /*color: rgb(67, 185, 224);*/
+
+
+}
+.Rsmall-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.Roomrow{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.Roomcol-3{
+    flex-basis: 45%;
+    min-width: 250px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.4);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.Roomcol-3 img{
+  width: 100%;
+}
+.Roomcol-3 h3{
+    text-align: center;
+    color: black;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    padding: 17px;
+    font-weight: lighter;
+}
+.Roomcol-3:hover{
+    transform: translateY(-10px);
+}
+.Roomcol-3 a{
+    text-decoration: none;
+    color: rgba(7, 5, 5, 0.719);
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.col-3 a:hover{
+    color:  rgba(10, 8, 8, 0.568);
+    transform: translateX(-5px);
+}
+.Roomcol-3 li{
+    list-style-type: none;
+    color:  rgba(7, 5, 5, 0.719);
+    font-size: 25px;
+    text-align: center;
+}
+.desc:hover{
+    background-color:rgba(10, 8, 8, 0.568);;
+    opacity: 3;
+}
+.gallery a{
+    background-color:rgb(67, 185, 224);
+    margin-bottom: 30px;
+    transition: background-color .4s;
+}
+.gallery a:hover{
+    background-color: white;
+    border: 1px solid rgb(67, 185, 224);
+    color: black;
+}
+/*Eat Styling CSS*/
+.Dine{
+   
+    margin-top: 60px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    color: rgba(10, 8, 8, 0.568);
+    padding-bottom: 70px;
+}
+.Dine h1{
+    font-family: 'Herr Von Muellerhoff', cursive;
+    color: rgb(67, 185, 224);
+    color: rgba(10, 8, 8, 0.568);
+    font-size: 7.5rem;
+    font-weight: 70;
+    line-height: .4;
+}
+.Dine p{
+    text-align: center;
+    margin: 50px;
+    font-style: italic;
+    color: rgba(10, 8, 8, 0.568);
+   /*color: rgb(67, 185, 224);*/
+
+
+}
+.rowd{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Dinecol-3{
+    flex-basis: 30%;
+    height: 500px;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.4);
+    transition: transform .3s;
+}
+.Dinecol-3 img{
+    width: 100%;
+    height: 80%;
+}
+.Dinecol-3:hover{
+    transform: translateY(-10px)
+}
+.Dinecol-3 h3{
+    padding: 30px 0;
+    color: black;
+}
+
+hr{
+    margin: 0 40px;
+    background-color: rgba(0,0,0,0.7);
+}
+/*Relax Part Styling*/
+.relax{
+    margin-top: 60px;
+    text-align: center;
+    font-size: 30px;
+    color: rgba(10, 8, 8, 0.568);
+}
+.relax h1{
+    font-family: 'Herr Von Muellerhoff', cursive;
+    color: rgba(67, 185, 224);
+    color: rgba(10, 8, 8, 0.568);
+    font-size: 7.5rem;
+    font-weight: 70;
+    line-height: .4;
+}
+
+.relax p{
+    text-align: center;
+    margin: 50px;
+    font-style: italic;
+    font-size: 40px;
+}
+.spa{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spa .spaimg{
+    flex-basis: 60%;
+    padding: 50px;
+}
+.spa .spaimg img{
+    width: 100%;
+}
+.spa .spatxt{
+    flex-basis: 40%;
+    color: white;
+    padding: 30px;
+    font-style: italic;
+}
+.spa .spatxt p{
+    font-style: normal;
+    font-size: 20px;
+}
+/*Footer*/
+footer{
+    background: #000;
+    color: white;
+    font-size: 14px;
+    padding: 60px 0 20px;
+    font-style: italic;
+    margin-top: 70px;
+}
+.foot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fot-visitagain{
+    flex-basis: 70%;
+    font-size: 20px;
+    padding-left: 90px;
+
+}
+.fot-followus{
+    flex-basis: 30%;
+    
+    font-size: 30px;
+}
+.fot-followus ul{
+    list-style-type: none;
+}
+footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+.copyright{
+    text-align: center;
+}
+/*Events Part Styling*/
+.events{
+    margin-top: 60px;
+    text-align: center;
+    font-size: 30px;
+    color: rgba(10, 8, 8, 0.568);
+}
+.events h1{
+    font-family: 'Herr Von Muellerhoff', cursive;
+    color: rgb(67, 185, 224);
+    color: rgba(10, 8, 8, 0.568);
+    font-size: 7.5rem;
+    font-weight: 70;
+    line-height: .4;
+}
+.events p{
+    text-align: center;
+    margin: 50px;
+    font-style: italic;
+    font-size: 40px;
+}
+.Evecol-3{
+    flex-basis: 30%;
+    height: 400px;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.4);
+    transition: transform .3s;
+}
+.Evecol-3:hover{
+    transform: translateY(-10px)
+}
+.Evecol-3 img{
+    width: 100%;
+    height: 80%;
+}
+.Evecol-3 h3{
+    padding: 23px;
+    color: black;
+}
+.extra{
+    margin-top: 50px;
+    margin-bottom: -20px;
+}
+.fixedebutton{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: none;
+}
+
+.fixedebutton i{
+    color: black;
+    border-radius: 50%;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 2.3vw;
+    background-color: rgba(67, 185, 224);
+}
+/*Book Form Styling*/
+.booking{
+    top: 20%;
+}
+.BookBtn{
+    font-size: 2.3vw;
+    padding: 2px;
+}
+.booking h3{
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 29px;
+    font-size: 3vw;
+    font-style: italic;
+    padding: 0 4px;
+    border: 1px solid rgba(67, 185, 224);
+    background-color: rgba(67, 185, 224);
+    
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color .3s
+}
+.booking h3:hover{
+    background-color: transparent;
+}
+/*View Rooms Styling*/
+.viewroom{
+    position: absolute;
+    top: 30%;
+    left: 7%;
+}
+.viewroom h3{
+    text-align: center;
+    margin-bottom: 37px;
+    font-size: 5.3vw;
+    color: rgba(184, 99, 19, 0.61);
+}
+.viewroom img{
+    filter: brightness(50%);
+}
+.viewroom h5{
+    text-align: center;
+    font-size: 3vw;
+}
+.viewroom li{
+    list-style-type: none;
+    color:  rgba(7, 5, 5, 0.719);
+    font-size: 25px;
+    text-align: center;
+}

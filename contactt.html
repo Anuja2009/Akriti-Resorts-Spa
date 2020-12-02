@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!--Font Awesomw Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!--Style CSS Link-->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <!--Script-->
+    <script src="main.js"></script>
+    <title>Akriti Resort Spa</title>
+  </head>
+  <body>
+      <!--Header-->
+      <div class="header">
+          <!--Carosel-->
+        <div class="container">
+        <div id="carouselExampleCaptions" class="carousel slide carousel-container" data-ride="carousel">
+            <!--<ol class="carousel-indicators">
+              <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>-->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="Images/Deluxe Rooms.jpg" class="d-block w-100" alt="...">
+                <div class="container">
+                    <div class="row">
+                        <div class="carousel-caption booking col-xs-6">
+                            <h3>Book Your Room</h3>
+                            <form name="booking" onsubmit="return formValidation(this)">
+                              <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                      <label for="name">Name</label>
+                                      <input type="text" name="name" class="form-control" id="name">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label for="city">City</label>
+                                      <input type="text" name="city" class="form-control" id="city">
+                                    </div>
+                                <div class="form-group col-md-6">
+                                  <label for="email">Email</label>
+                                  <input type="text" name="email" class="form-control" id="email">
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <label for="password">Password</label>
+                                  <input type="text" name="password" class="form-control" id="password">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="address">Address</label>
+                                <input type="text" name="address" class="form-control" id="address">
+                              </div>
+                              <div class="form-row">
+                                <!--<div class="form-group col-md-6">
+                                  <label for="inputCity">City</label>
+                                  <input type="text" class="form-control" id="inputCity">
+                                </div>-->
+                                <div class="form-group col-md-4">
+                                  <label for="no_of_people">No. of People</label>
+                                  <select id="no_of_people" name="no_of_people" class="form-control">
+                                    <option value="">Choose</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                  </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                  <label for="type_of_room">Type of Room</label>
+                                  <select id="type_of_room" name="type_of_room" class="form-control">
+                                    <option value="">Choose</option>
+                                    <option value="Deluxe">Deluxe</option>
+                                    <option value="Premium">Premuim</option>
+                                    <option value="Villas">Villas</option>
+                                    <option value="Private Plunge Pool">Private Plunge Pool</option>
+                                    <option value="AC">AC</option>
+                                    <option valu="NonAC">NonAC</option>
+                                  </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                  <label for="phone">Mobile No</label>
+                                  <input type="text" name="phone" id="phone" class="form-control">
+                                  
+                                </div>
+                                <!--<div class="form-group col-md-4">
+                                  <label for="inputState">No. of People</label>
+                                  <select id="inputState" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                  </select>
+                                </div>
+                                --<div class="form-group col-md-2">
+                                  <label for="inputZip">Zip</label>
+                                  <input type="text" class="form-control" id="inputZip">
+                                </div>-->
+                              </div>
+                              <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                      <label for="check_in_date">Check-In</label>
+                                      <input type="date" name="check_in_date" class="form-control" id="check_in_date">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                      <label for="check_out_date">Check-Out</label>
+                                      <input type="date" name="check_out_date" class="form-control" id="check_out_date">
+                                    </div>
+                              </div>
+
+                              <div class="form-group">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck" value="gridCheck">
+                                  <label class="form-check-label" for="gridCheck">
+                                    I agree to the terms and conditions
+                                  </label>
+                                </div>
+                              </div>
+                              <button type="submit" name="submit" value="submit" id="submit" class="btn btn-primary p-3 BookBtn">Book</button>
+                            </form>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+             </div>
+            </div>
+          </div>
+        </div>
+          <!--Navbar-->
+        <div class="container nav-container" id="up">
+            <nav class="navbar navbar-expand-lg ">
+            <a class="navbar-brand" href="#">Akriti</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#r">Stay</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#d">Dine</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#rel">Relax</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#e">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#c">Contact</a>
+                </li>
+            </div>
+            </nav>
+        </div>
+      </div>
+
+
+      <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script>
+      function formValidation(booking)
+      {
+         /* var name=document.booking.name.value;
+          var city = document.booking.city.value;
+          var email = document.booking.email.value;
+          var password = document.booking.password.value;
+          var address = document.booking.address.value;
+          var no_of_people = document.booking.no_of_people.value;
+          var type_of_room = document.booking.type_of_room.value;
+          var phone=document.booking.phone.value;
+          var check_in_date = document.booking.check_in_date.value;
+          var check_out_date = document.booking.check_out_date.value;
+          var gridCheck=document.booking.gridCheck.value;*/
+          var email = document.booking.email.value;
+          var name=document.booking.name.value;
+          var city = document.booking.city.value;
+          var password = document.booking.password.value;
+          var address = document.booking.address.value;
+          var phone=document.booking.phone.value;
+          var no_of_people=document.getElementById('no_of_people');
+          var type_of_room=document.getElementById('type_of_room');
+          var check_in_date = document.booking.check_in_date.value;
+          var check_out_date = document.booking.check_out_date.value;
+          if(check_required(name,city,address,no_of_people,type_of_room,check_in_date,check_out_date)){
+            if(check_Email(email)){
+              if(passid_validation(password,5,12)){
+                if(phonenumber(phone)){
+                  alert("Form Submitted Succesfully!");
+                }
+
+              }
+
+            }
+          }
+          
+          
+
+
+
+      function check_Email(email){
+            var regex = /^(([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5}){1,25})+([;.](([a-zA-Z0-9_\-\.]+)@{[a-zA-Z0-9_\-\.]+0\.([a-zA-Z]{2,5}){1,25})+)*$/;
+            if(regex.test(email)){
+              
+              return true;
+            }
+            else{
+              alert("This is not a valid email address");
+                return false;
+            }
+      }
+      function check_required(name,city,address,no_of_people,type_of_room,check_in_date,check_out_date){
+            if (name == "" || name == null){
+              alert("Name is mandatory");
+              return false;
+            }
+            if(city == "" || city == null){
+              alert("City is mandatory");
+              return false;
+            }
+            if(address == "" || address == null){
+              alert("Address is mandatory");
+              return false;
+            }
+            if(no_of_people.value=='' || no_of_people.value==null){
+              alert("No of People is mandatory");
+              return false;
+            }
+            if(type_of_room.value=='' || type_of_room.value==null){
+              alert("Type of room is mandatory");
+              return false;
+            }
+            if(check_in_date == "" || check_in_date == null){
+              alert("Check-in is mandatory");
+              return false;
+            }
+            if(check_out_date == "" || check_out_date == null){
+              alert("Check-out is mandatory");
+              return false;
+            }
+
+
+            else{
+              return true;
+            }
+      }
+      function passid_validation(password,mx,my){
+            var passid_len = password.length;
+            if (passid_len == 0 ||passid_len >= my || passid_len < mx)  {
+              alert("Password should not be empty / length be between "+mx+" to "+my);
+              passid.focus();
+              return false;
+            }else{
+              return true;
+            }
+              
+      }
+      function phonenumber(inputtxt)
+    {
+        var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+        if((inputtxt.match(phoneno))){
+          return true;
+        }else{
+          alert("Enter valid Phone number");
+          return false;
+        }
+}
+
+
+}
+    </script>
+</body>
+</html>
